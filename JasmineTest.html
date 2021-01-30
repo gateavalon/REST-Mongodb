@@ -1,0 +1,37 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Our First Jasmine Tests</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.0.0/jasmine.css" rel="stylesheet" />
+</head>
+<body>
+  <div id="jasmine"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.0.0/jasmine.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.0.0/jasmine-html.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.0.0/boot.js"></script>
+<script>
+
+    var earth = {
+        isRound: true,
+        numberFromSun: 3,
+        density: 5.51
+    };
+
+    describe("Earth", function(){
+
+        it("is round", function(){
+            expect(earth.isRound).toEqual(true);
+        });
+
+        it("is the third planet from the sun", function(){
+            expect(earth.numberFromSun).toEqual(3);
+        });
+
+        it("is the densest of all the planets", function(){
+            expect(earth.density).toBeGreaterThan(5.50);
+        });
+
+    });
+  </script>
+</body>
+</html>
